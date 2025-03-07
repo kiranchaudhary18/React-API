@@ -1,0 +1,163 @@
+.potter-container {
+    padding: 1rem 0;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+  
+  .characters-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  
+  .character-card {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+    border: 3px solid #333;
+  }
+  
+  .character-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .character-image-container {
+    height: 250px;
+    overflow: hidden;
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .character-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .character-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    font-weight: bold;
+    color: white;
+  }
+  
+  .character-info {
+    padding: 1rem;
+  }
+  
+  .character-name {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+  }
+  
+  .character-house {
+    font-size: 1rem;
+    font-weight: 500;
+  }
+  
+  /* Modal specific styles */
+  .character-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+  }
+  
+  .character-tag {
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 16px;
+    font-size: 0.8rem;
+  }
+  
+  .modal-header {
+    border-bottom: 3px solid #333;
+  }
+  
+  .character-placeholder.large {
+    font-size: 5rem;
+    height: 300px;
+    border-radius: 8px;
+  }
+  
+  .character-details {
+    margin-top: 1.5rem;
+  }
+  
+  .detail-item {
+    margin-bottom: 0.75rem;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .detail-label {
+    font-weight: 500;
+    min-width: 120px;
+    color: #666;
+  }
+  
+  .detail-value {
+    flex: 1;
+  }
+  
+  /* Filter specific styles */
+  .house-select {
+    min-width: 150px;
+    margin: 0 auto;
+    display: block;
+  }
+  
+  @media (max-width: 768px) {
+    .characters-grid {
+      grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+      gap: 1rem;
+    }
+  
+    .character-image-container {
+      height: 150px;
+    }
+  
+    .detail-item {
+      flex-direction: column;
+    }
+  
+    .detail-label {
+      margin-bottom: 0.25rem;
+    }
+  }
+  
+  /* Better grid for larger screens */
+  @media (min-width: 1200px) {
+    .characters-grid {
+      grid-template-columns: repeat(5, 1fr);
+      gap: 2rem;
+    }
+  }
+  
+  /* Fix modal layout for larger screens */
+  @media (min-width: 992px) {
+    .modal-body {
+      display: grid;
+      grid-template-columns: 300px 1fr;
+      gap: 2rem;
+    }
+  
+    .modal-image-container {
+      height: auto;
+      max-height: 400px;
+    }
+  }
+  
+  
